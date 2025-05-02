@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Luka Hrastnik CV</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="top-nav">
+    <div class="nav-container">
+      <h1 class="site-title">Luka Hrastnik</h1>
+      <div class="line"></div>
+      <div class="nav-links-group">
+        <ul class="nav-links nav-links-left">
+          <li class="home-link"><a href="#home" id="link-home" data-translate="navHome">Home</a></li>
+          <li><a href="#about" id="link-about" data-translate="navAbout">About me</a></li>
+          <li><a href="#skills" id="link-skills" data-translate="navSkills">Skills</a></li>
+        </ul>
+        <ul class="nav-links nav-links-right">
+          <li><a href="#cv-portfolio" id="link-cv-portfolio" data-translate="navCvPortfolio">CV/Portfolio</a></li>
+          <li><a href="#contact" id="link-contact" data-translate="navContact">Contact</a></li>
+        </ul>
+      </div>
+      <div id="translation">
+        <span id="lang-eng" class="lang active" onclick="setLanguage('eng')">Eng</span> /
+        <span id="lang-slo" class="lang" onclick="setLanguage('slo')">Slo</span> /
+        <span id="theme-toggle-container">
+          <span id="sun-icon" class="theme-icon">☀︎</span>
+          <span id="moon-icon" class="theme-icon">☾</span>
+        </span>
+      </div>
+    </div>
+    <div class="nav-collapse-arrow" onclick="toggleNav()">▲</div>
+  </nav>
+  <div class="nav-hamburger" onclick="toggleNav()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <main class="main-container">
+    <section id="home" class="section home-section">
+      <div class="intro-container home-intro">
+        <div class="portrait-container" data-animation="fade-in">
+          <div class="portrait-wrapper">
+            <img src="Photos/Luka.H.png" alt="Portrait of Luka" class="portrait" />
+            <div class="hello-overlay">
+              <span class="hello-text">HELLO</span>
+            </div>
+          </div>
+        </div>
+        <div class="welcome-container home-text">
+          <p class="intro-text" data-animation="slide-in-right" data-translate="homeParagraph">
+            my name is Luka Hrastnik<br>and i'm a young IT student.
+          </p>
+          <img src="Photos/arrow.png" class="arrow-down" data-animation="fade-in" onclick="scrollToAbout()">
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="about-content">
+        <div class="about-block">
+          <p class="about-text" data-animation="fade-in">
+            <strong data-translate="aboutEducationTitle">-Education & Background-</strong>
+            <span data-translate="aboutEducation">
+              Hi, I'm Luka Hrastnik. I'm currently studying Computer Science at SOFIZO d.o.o. Maribor. Before that, I completed high school at Srednja šola za trženje in dizajn Maribor, where I focused on Interior Decorating. At first glance, it might seem like a big shift from design to tech but both paths come from the same place: creativity, curiosity, and a love for building things, whether digital or physical.
+              
+              I've lived my whole life in Zgornja Polskava, a small place that has shaped me in big ways. It's where I've grown up, discovered my passions, and taken on challenges that taught me a lot about responsibility and perseverance.
+            </span>
+          </p>
+          <div class="slider" data-slider="1" data-animation="slide-in-left">
+            <div class="slider-wrapper">
+              <img src="Photos/LukaGuitar.jpeg" class="slider-img" data-slider="1" data-index="1" alt="Slider 1 Image 2" onclick="openModal(this)" />
+              <img src="Photos/trst.jpeg" class="slider-img" data-slider="1" data-index="2" alt="Slider 1 Image 3" onclick="openModal(this)" />
+              <img src="Photos/hvar.jpeg" class="slider-img" data-slider="1" data-index="3" alt="Slider 1 Image 4" onclick="openModal(this)" />
+            </div>
+          </div>
+        </div>
+
+        <div class="about-block">
+          <p class="about-text" data-animation="fade-in">
+            <strong data-translate="aboutFarmingTitle">-Farming & Daily Life-</strong>
+            <span data-translate="aboutFarming">
+              In 2017, after my father passed away, I inherited our 12-hectare family farm. I was only 16 at the time. Taking on such a big responsibility at a young age wasn't easy, but it taught me how to stay strong, stay grounded, and work hard for what matters. I'm proud to be the fourth generation caring for the land.
+              
+              Our farm is home to laying hens, and we sell fresh, free-range eggs. We also manage a 15-hectare forest and recently added a sawmill so we can process timber ourselves. We even have a Highland cow named Daisy who helps keep the pastures neat. Farming is physically demanding, but it gives me purpose and keeps me connected to nature.
+            </span>
+          </p>
+          <div class="slider" data-slider="2" data-animation="slide-in-left">
+            <div class="slider-wrapper">
+              <img src="Photos/Greenhause.jpeg" class="slider-img" data-slider="2" data-index="0" alt="Slider 2 Image 1" onclick="openModal(this)" />
+              <img src="Photos/farming3.jpeg" class="slider-img" data-slider="2" data-index="1" alt="Slider 2 Image 2" onclick="openModal(this)" />
+              <img src="Photos/HOME.jpeg" class="slider-img" data-slider="2" data-index="2" alt="Slider 2 Image 3" onclick="openModal(this)" />
+              <img src="Photos/Farming2.jpeg" class="slider-img" data-slider="2" data-index="3" alt="Slider 2 Image 4" onclick="openModal(this)" />
+              <img src="Photos/saw2.jpeg" class="slider-img" data-slider="2" data-index="4" alt="Slider 2 Image 5" onclick="openModal(this)" />
+              <img src="Photos/saw1.jpeg" class="slider-img" data-slider="2" data-index="5" alt="Slider 2 Image 6" onclick="openModal(this)" />
+            </div>
+          </div>
+        </div>
+
+        <div class="about-block">
+          <p class="about-text" data-animation="fade-in">
+            <strong data-translate="aboutPassionsTitle">-Passions & Hobbies-</strong>
+            <span data-translate="aboutPassions">
+              When I'm not studying or working on the farm, I'm usually doing something creative. Music is a huge part of my life (guitar, bass guitar, and accordion). It's how I relax, express myself, and reset after a long day. I also collect vintage vinyl records, with a special love for jazz, rock, and classical. One of my proudest collections is every Slovenian Avsenik record ever released.
+              
+              I'm also really into old Tomos mopeds. Restoring and selling them started as a side project, and now I have five in my personal collection. There's something incredibly satisfying about fixing them up and bringing them back to life. I also enjoy botanical gardening, which gives me a peaceful way to spend time outdoors.
+              
+              In winter, you'll often find me on the slopes. It's the perfect mix of adrenaline, focus, and being out in nature. Just like music and riding my Honda CBF125 motorcycle through Slovenia, skiing gives me a sense of freedom and clears my mind.
+            </span>
+          </p>
+          <div class="slider" data-slider="3" data-animation="slide-in-left">
+            <div class="slider-wrapper">
+              <img src="Photos/Record.jpg" class="slider-img" data-slider="3" data-index="0" alt="Slider 3 Image 1" onclick="openModal(this)" />
+              <img src="Photos/Guitar.jpeg" class="slider-img" data-slider="3" data-index="1" alt="Slider 3 Image 2" onclick="openModal(this)" />
+              <img src="Photos/Acordion.jpeg" class="slider-img" data-slider="3" data-index="2" alt="Slider 3 Image 3" onclick="openModal(this)" />
+              <img src="Photos/Honda1.jpeg" class="slider-img" data-slider="3" data-index="3" alt="Slider 3 Image 4" onclick="openModal(this)" />
+              <img src="Photos/Moped.jpeg" class="slider-img" data-slider="3" data-index="4" alt="Slider 3 Image 5" onclick="openModal(this)" />
+              <img src="Photos/skie.jpeg" class="slider-img" data-slider="3" data-index="5" alt="Slider 3 Image 6" onclick="openModal(this)" />
+            </div>
+          </div>
+        </div>
+
+        <div class="about-block">
+          <p class="about-text" data-animation="fade-in">
+            <strong data-translate="aboutPersonalTitle">-Personal Life-</strong><br>
+            <span data-translate="aboutPersonal">
+              The two biggest sources of support in my life are Ana and Lola. Ana is my partner, and we've been together since 2017. She's a passionate and caring kindergarten teacher, and we recently celebrated seven years together. We've grown a lot as a couple, and she continues to inspire me every day.
+              <br><br>
+              Lola is our black-and-tan dachshund, small in size but big in personality. She's stubborn, sassy, and has a "Who do you think you are?" attitude that cracks me up and makes me love her even more.
+              <br><br>
+              My life is a mix of tradition, creativity, and exploration. Whether I'm working with code, soil, strings, skis, or engines, I enjoy learning, building, and doing things with heart.
+            </span>
+          </p>
+          <div class="slider" data-slider="4" data-animation="slide-in-left">
+            <div class="slider-wrapper">
+              <img src="Photos/boat.jpeg" class="slider-img" data-slider="4" data-index="0" alt="Slider 4 Image 1" onclick="openModal(this)" />
+              <img src="Photos/Lola goofy.jpg" class="slider-img" data-slider="4" data-index="1" alt="Slider 4 Image 2" onclick="openModal(this)" />
+              <img src="Photos/MEANDANA.jpg" class="slider-img" data-slider="4" data-index="2" alt="Slider 4 Image 3" onclick="openModal(this)" />
+              <img src="Photos/Lola.jpeg" class="slider-img" data-slider="4" data-index="3" alt="Slider 4 Image 4" onclick="openModal(this)" />
+              <img src="Photos/Lola snow.jpeg" class="slider-img" data-slider="4" data-index="4" alt="Slider 4 Image 5" onclick="openModal(this)" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+      <div>
+        <h2 data-animation="fade-in" data-translate="digitalSkillsHeading">Digital Skills</h2>
+        <div class="carousel-container">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="Photos/html.png" alt="HTML Logo" class="skill-img">
+            </div>
+            <div class="carousel-item">
+              <img src="Photos/css-3-logo-png_seeklogo-297888.png" alt="CSS Logo" class="skill-img">
+            </div>
+            <div class="carousel-item">
+              <img src="Photos/javascript_logo.png" alt="JavaScript Logo" class="skill-img">
+            </div>
+            <div class="carousel-item">
+              <img src="Photos/Electron JS.png" alt="Electron JS Logo" class="skill-img">
+            </div>
+            <div class="carousel-item">
+              <img src="Photos/Python.png" alt="Python Logo" class="skill-img">
+            </div>
+            <div class="carousel-item">
+              <img src="Photos/Make_logo.png" alt="Node.js Logo" class="skill-img">
+            </div>
+            <div class="carousel-item">
+              <img src="Photos/GitHub.png" alt="GitHub Logo" class="skill-img">
+            </div>
+            <div class="carousel-item">
+              <img src="Photos/C_Sharp.png" alt="C# Logo" class="skill-img">
+            </div>
+            <div class="carousel-item">
+              <img src="Photos/bootstrap.png" alt="Bootstrap Logo" class="skill-img">
+            </div>
+            <div class="carousel-item">
+              <img src="Photos/Illustrator.png" alt="Illustrator Logo" class="skill-img">
+            </div>
+            <div class="carousel-item">
+              <img src="Photos/Photoshop.png" alt="Photoshop Logo" class="skill-img">
+            </div>
+            <div class="carousel-item">
+              <img src="Photos/Figma-logo.png" alt="Figma Logo" class="skill-img">
+            </div>
+            <div class="carousel-item">
+              <img src="Photos/Access.png" alt="Access Logo" class="skill-img">
+            </div>
+            <div class="carousel-item">
+              <img src="Photos/Excel.png" alt="Excel Logo" class="skill-img">
+            </div>
+            <div class="carousel-item">
+              <img src="Photos/Office_Word.png" alt="Word Logo" class="skill-img">
+            </div>
+            <div class="carousel-item">
+              <img src="Photos/WordPress.png" alt="WordPress Logo" class="skill-img">
+            </div>
+            <div class="carousel-item">
+              <img src="Photos/VirtualBox.png" alt="VirtualBox Logo" class="skill-img">
+            </div>
+            <div class="carousel-item">
+              <img src="Photos/kofax-sq.jpg" alt="Kofax Logo" class="skill-img">
+            </div>
+            <div class="carousel-item">
+              <img src="Photos/Node.png" alt="Node.js Logo" class="skill-img">
+            </div>
+            <div class="carousel-item">
+              <img src="Photos/Vs.png" alt="Visual Studio Logo" class="skill-img">
+            </div>
+          </div>
+          <button class="carousel-control-prev" onclick="carouselPrev()">&#10094;</button>
+          <button class="carousel-control-next" onclick="carouselNext()">&#10095;</button>
+          <div class="carousel-indicators">
+            <span class="carousel-indicator-text"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cv-portfolio" class="section skills-section">
+      <div>
+        <h2 data-animation="fade-in" data-translate="skillsHeading">Download my Cv and Portfolio</h2>
+        <p class="s_discription1" data-animation="slide-in-left" data-translate="skillsDescription1">Below is my Europass CV and Graphic Design Portfolio.</p>
+        <div class="big-download-btns">
+          <div class="download-item">
+            <div class="download-container" data-type="cv">
+              <div class="initial-text" data-translate="cvDownload">Download Europass CV</div>
+              <div class="active-content">
+                <p data-translate="downloadHereCv">Download CV here</p>
+                <a href="pdf/CV - Luka Hrastnik.pdf" download="Luka_Hrastnik_CV.pdf" class="small-download-btn">⬇</a>
+              </div>
+            </div>
+            <p class="s_discription2" data-animation="slide-in-right" data-translate="cvDescription">My Europass CV includes my basic and professional information, such as skills, references, work experience, and education.</p>
+          </div>
+          <div class="download-item">
+            <div class="download-container" data-type="portfolio">
+              <div class="initial-text" data-translate="portfolioDownload">Download Graphic Design Portfolio</div>
+              <div class="active-content">
+                <p data-translate="downloadHerePortfolio">Download Portfolio here</p>
+                <a href="pdf/Graphic design portfolio.pdf" download="Graphic design portfolio.pdf" class="small-download-btn">⬇</a>
+              </div>
+            </div>
+            <p class="s_discription2" data-animation="slide-in-right" data-translate="portfolioDescription">My Graphic Design Portfolio showcases work I’ve created for myself as well as for others.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="intro-container">
+        <img src="Photos/Luka' card.png" alt="Luka card" class="Card" data-animation="fade-in">
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" onclick="closeModal(event)">
+    <span class="modal-close" onclick="closeModal(event)">✖</span>
+    <span class="modal-arrow modal-left" onclick="modalSlideLeft(event)">◀</span>
+    <img class="modal-content" id="modal-img" alt="Expanded Image">
+    <span class="modal-arrow modal-right" onclick="modalSlideRight(event)">▶</span>
+  </div>
+
+  <footer class="bottom-footer">
+    <p>- Luka Hrastnik 2025 -</p>
+  </footer>
+
+  <script src="script.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9374eda15e584545',t:'MTc0NTgyNjIwMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
